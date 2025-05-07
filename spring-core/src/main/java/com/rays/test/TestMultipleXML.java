@@ -7,7 +7,10 @@ public class TestMultipleXML {
 
 	public static void main(String[] args) {
 
-		ApplicationContext context = new ClassPathXmlApplicationContext(new String[] { "user.xml", "person.xml" });
+		// ApplicationContext context = new ClassPathXmlApplicationContext(new String[]{
+		// "user.xml", "person.xml" });
+
+		ApplicationContext context = new ClassPathXmlApplicationContext("user.xml", "person.xml");
 
 		User user = (User) context.getBean("user"); // context.getBean(UserBean.class);
 

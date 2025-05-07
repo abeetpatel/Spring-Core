@@ -3,15 +3,10 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<!-- by setter method's -->
-	<bean name="user" class="com.rays.test.User">
-		<property name="login" value="Abeet"></property>
-		<property name="password" value="Patel"></property>
-	</bean>
+	<!-- <bean id="personBean" class="com.rays.test.Person"> <property name="name" 
+		value="spring" /> </bean> -->
 
-	<!-- by constructor -->
-	<!-- <bean name="user" class="com.rays.test.User">
+	<bean id="person" class="com.rays.test.Person">
 		<constructor-arg value="Abeet"></constructor-arg>
-		<constructor-arg value="Patel"></constructor-arg>
-	</bean> -->
+	</bean>
 </beans>
