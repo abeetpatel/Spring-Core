@@ -1,0 +1,17 @@
+package com.rays.instance;
+
+public class ServiceLocator {
+
+	private static ServiceLocator instance;
+
+	private ServiceLocator() {
+		System.out.println("in service locator method....");
+	}
+
+	public static ServiceLocator getInstance() {
+		if (instance == null) {
+			instance = new ServiceLocator();
+		}
+		return instance;
+	}
+}
