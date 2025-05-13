@@ -1,0 +1,6 @@
+INDEX VERSION 1.131+C:\Users\abeet\Desktop\Spring-Core\.metadata\.plugins\org.eclipse.jdt.core
+2134673911.index
+1918695818.index
+2272460969.index
+1223440609.index
+3127553860.index
