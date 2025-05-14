@@ -28,16 +28,16 @@ public class TestUserService {
 		// test.testDelete();
 		// test.testFindByPk();
 		// test.testAuth();
-		test.testSearch();
+		// test.testSearch();
 
 	}
 
 	public void testAdd() {
 		UserDTO dto = new UserDTO();
 		// dto.setId(1);
-		dto.setFirstName("ABC");
-		dto.setLastName("ABC");
-		dto.setLogin("ABC@gmail.com");
+		dto.setFirstName("Abeet");
+		dto.setLastName("Patel");
+		dto.setLogin("Abeet@gmail.com");
 		dto.setPassword("pass1234");
 		long pk = service.add(dto);
 		System.out.println("PK->" + pk);
@@ -45,17 +45,26 @@ public class TestUserService {
 
 	public void testUpdate() {
 		UserDTO dto = new UserDTO();
-		dto.setId(1);
-		dto.setFirstName("ABC");
-		dto.setLastName("XYZ");
-		dto.setLogin("ABC@gmail.com");
+		dto.setId(2);
+		dto.setFirstName("Dev");
+		dto.setLastName("Sahu");
+		dto.setLogin("Dev@gmail.com");
 		dto.setPassword("pass1234");
 		service.update(dto);
 		System.out.println("Record updated");
 	}
 
+	public void testDelete() {
+		UserDTO dto = service.delete(1);
+		System.out.print(dto.getId());
+		System.out.print("\t" + dto.getFirstName());
+		System.out.print("\t" + dto.getLastName());
+		System.out.print("\t" + dto.getLogin());
+		System.out.println("\t" + dto.getPassword());
+	}
+
 	public void testFindByPk() {
-		UserDTO dto = service.findByPK(1);
+		UserDTO dto = service.findByPK(2);
 		System.out.print(dto.getId());
 		System.out.print("\t" + dto.getFirstName());
 		System.out.print("\t" + dto.getLastName());
@@ -64,7 +73,7 @@ public class TestUserService {
 	}
 
 	public void testAuth() {
-		UserDTO dto = service.authenticate("ABC@gmail.com", "pass1234");
+		UserDTO dto = service.authenticate("Dev@gmail.com", "pass1234");
 		if (dto != null) {
 			System.out.print(dto.getId());
 			System.out.print("\t" + dto.getFirstName());

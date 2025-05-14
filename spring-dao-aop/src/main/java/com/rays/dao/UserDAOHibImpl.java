@@ -91,7 +91,6 @@ public class UserDAOHibImpl implements UserDAOInt {
 	}
 
 	public UserDTO auth(String login, String password) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 

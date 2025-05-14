@@ -25,7 +25,7 @@ public class TestUserService {
 		TestUserService test = (TestUserService) context.getBean("testUserService");
 
 		// test.testFindByPk();
-		test.testAdd();
+		// test.testAdd();
 		// test.testUpdate();
 		// test.testSearch();
 		// test.testAuth();
@@ -47,9 +47,9 @@ public class TestUserService {
 	public void testAdd() {
 		UserDTO dto = new UserDTO();
 		// dto.setId(1);
-		dto.setFirstName("ABC");
-		dto.setLastName("ABC");
-		dto.setLogin("ABC@gmail.com");
+		dto.setFirstName("Abeet");
+		dto.setLastName("Patel");
+		dto.setLogin("Abeet@gmail.com");
 		dto.setPassword("pass1234");
 		long pk = service.add(dto);
 		System.out.println("PK->" + pk);
@@ -57,10 +57,10 @@ public class TestUserService {
 
 	public void testUpdate() {
 		UserDTO dto = new UserDTO();
-		dto.setId(1);
-		dto.setFirstName("ABC");
-		dto.setLastName("XYZ");
-		dto.setLogin("ABC@gmail.com");
+		dto.setId(2);
+		dto.setFirstName("dev");
+		dto.setLastName("sahu");
+		dto.setLogin("dev@gmail.com");
 		dto.setPassword("pass1234");
 		service.update(dto);
 		System.out.println("Record updated");

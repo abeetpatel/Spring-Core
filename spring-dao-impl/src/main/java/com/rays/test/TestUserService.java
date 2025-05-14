@@ -23,21 +23,21 @@ public class TestUserService {
 
 		TestUserService test = (TestUserService) context.getBean("testUserService");
 
-		// test.testAdd();
+		 test.testAdd();
 		// test.testUpdate();
 		// test.testDelete();
 		// test.testFindByPk();
 		// test.testAuth();
-		test.testSearch();
+		// test.testSearch(); 
 
 	}
 
 	public void testAdd() {
 		UserDTO dto = new UserDTO();
-		// dto.setId(1);
-		dto.setFirstName("ABC");
-		dto.setLastName("ABC");
-		dto.setLogin("ABC@gmail.com");
+		 dto.setId(1);
+		dto.setFirstName("Girvar");
+		dto.setLastName("Choudhari");
+		dto.setLogin("Girvar@gmail.com");
 		dto.setPassword("pass1234");
 		long pk = service.add(dto);
 		System.out.println("PK->" + pk);
