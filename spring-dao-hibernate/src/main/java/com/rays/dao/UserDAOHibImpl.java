@@ -91,8 +91,16 @@ public class UserDAOHibImpl implements UserDAOInt {
 	}
 
 	public UserDTO auth(String login, String password) {
-		// TODO Auto-generated method stub
-		return null;
+		UserDTO dto = null;
+		Session session = sessionFactory.getCurrentSession();
+		Criteria criteria = session.createCriteria(UserDTO.class);
+		criteria.add(Restrictions.eq("login", login));
+		criteria.add(Restrictions.eq("password", password));
+		List list = criteria.list();
+		if (list.size() == 1) {
+			dto = (UserDTO) list.get(0);
+		}
+		return dto;
 	}
 
 }

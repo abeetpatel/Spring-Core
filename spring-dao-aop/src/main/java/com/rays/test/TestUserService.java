@@ -66,6 +66,15 @@ public class TestUserService {
 		System.out.println("Record updated");
 	}
 
+	public void testDelete() {
+		UserDTO dto = service.delete(1);
+		System.out.print(dto.getId());
+		System.out.print("\t" + dto.getFirstName());
+		System.out.print("\t" + dto.getLastName());
+		System.out.print("\t" + dto.getLogin());
+		System.out.println("\t" + dto.getPassword());
+	}
+
 	public void testFindByPk() {
 		UserDTO dto = service.findByPK(1);
 		System.out.print(dto.getId());

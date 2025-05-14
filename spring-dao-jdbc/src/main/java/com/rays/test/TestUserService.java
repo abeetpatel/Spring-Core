@@ -23,21 +23,21 @@ public class TestUserService {
 
 		TestUserService test = (TestUserService) context.getBean("testUserService");
 
-		 test.testAdd();
+		// test.testAdd();
 		// test.testUpdate();
 		// test.testDelete();
 		// test.testFindByPk();
-		// test.testAuth();
+		 test.testAuth();
 		// test.testSearch();
 
 	}
 
 	public void testAdd() {
 		UserDTO dto = new UserDTO();
-		// dto.setId(1);
-		dto.setFirstName("xyz");
-		dto.setLastName("xyz");
-		dto.setLogin("admin");
+		dto.setId(2);
+		dto.setFirstName("Abeet");
+		dto.setLastName("Patel");
+		dto.setLogin("Abeet@gmail.com");
 		dto.setPassword("pass1234");
 		long pk = service.add(dto);
 		System.out.println("Data Inserted... pk = " + pk);
@@ -45,21 +45,22 @@ public class TestUserService {
 
 	public void testUpdate() {
 		UserDTO dto = new UserDTO();
-		dto.setId(1);
 		dto.setFirstName("ABC");
 		dto.setLastName("XYZ");
 		dto.setLogin("ABC@gmail.com");
 		dto.setPassword("pass1234");
+		dto.setId(1);
 		service.update(dto);
 		System.out.println("Data updated");
 	}
 
 	private void testDelete() {
-		service.delete(1L);
+		service.delete(0);
+		System.out.println("Data Deleted Successfully....");
 	}
 
 	public void testFindByPk() {
-		UserDTO dto = service.findByPK(1);
+		UserDTO dto = service.findByPK(2);
 		if (dto != null) {
 			System.out.print(dto.getId());
 			System.out.print("\t" + dto.getFirstName());
@@ -72,7 +73,7 @@ public class TestUserService {
 	}
 
 	public void testAuth() {
-		UserDTO dto = service.authenticate("ABC@gmail.com", "pass1234");
+		UserDTO dto = service.authenticate("Abeet@gmail.com", "pass1234");
 		if (dto != null) {
 			System.out.print(dto.getId());
 			System.out.print("\t" + dto.getFirstName());
